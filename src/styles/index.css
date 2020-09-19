@@ -1,0 +1,136 @@
+@tailwind base;
+
+@tailwind components;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+tbody tr:nth-child(even) {
+  @apply bg-purpleCustom-100;
+}
+
+tbody tr:nth-child(odd) {
+  @apply bg-purpleCustom-200;
+}
+
+tbody tr:hover {
+  @apply bg-purpleCustom-300;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+.avatar {
+  height: 50px;
+}
+
+.avatar:hover {
+  transform: scale(1.2);
+}
+
+.standard-transition {
+  @apply transition-all duration-300 ease-linear;
+}
+
+.strong-text {
+  @apply text-purpleCustom-600;
+}
+
+.standard-text {
+  @apply text-purpleCustom-400;
+}
+
+.chevron::before {
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.6em;
+  left: 0.4em;
+  position: relative;
+  top: 0.55rem;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.6em;
+  transition: all 0.5s linear;
+}
+
+.chevron.bottom:before {
+  top: 0.25rem;
+  transform: rotate(135deg);
+  transition: all 0.5s linear;
+}
+
+.sort-content {
+  min-width: 130px;
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    padding-left: 30%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 50%;
+    left: 10px;
+    width: 30%;
+    padding-right: 10px;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: 'Member';
+  }
+  td:nth-of-type(2):before {
+    content: 'Status';
+  }
+  td:nth-of-type(3):before {
+    content: 'Email';
+  }
+  td:nth-of-type(4):before {
+    content: 'Invites';
+  }
+  td:nth-of-type(5):before {
+    content: 'Campaigns';
+  }
+  td:nth-of-type(6):before {
+    content: 'Joined';
+  }
+}
+
+@tailwind utilities;
