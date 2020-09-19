@@ -2,7 +2,6 @@ import './styles/tailwind.css';
 
 import React, { useEffect, useState } from 'react';
 
-import Helmet from 'react-helmet';
 import MemberStatistics from './components/MemberStatistics';
 import MemberTable from './components/MemberTable';
 import logo from './logo.svg';
@@ -75,12 +74,6 @@ function App() {
 
   return (
     <>
-      <Helmet>
-        <link
-          href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'
-          rel='stylesheet'
-        />
-      </Helmet>
       <div className='w-full'>
         <h1 className='text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 text-sans mt-12 mb-8 text-center'>
           Chameleon Member List
