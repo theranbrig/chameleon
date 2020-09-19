@@ -14,6 +14,8 @@ I tried to split up the code into a few components, though for this size of an a
 
 The hardest part of this one was the styling on mobile, as tables are not that friendly when having long rows of data. I decided to go with the method of turning it from `display:table` to `display:block` and stacking the items. You lose the sorting functionality with this method since the headers are hidden, but that could be modified for future versions by adding a dropdown to sort by category. I did not have time to add this in, but it would be relatively simple as the sort functionality is already built.
 
+I would normally purge the excess CSS from Tailwind for production, but since it is not in production the full file is in there.
+
 I hope that you enjoy looking through my code. I think it gives you a good impression of my architecture and thought process. I welcome any feedback you may have, and I look forward to talking with you more in the future.
 
 ## Original Readme Content
